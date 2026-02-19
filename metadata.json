@@ -1,0 +1,7 @@
+{
+  "name": "Sedai Aero - The Future of Personal Aviation",
+  "description": "A futuristic landing page for Sedai Aero, featuring luxury hybrid eVTOL aircraft, amphibious capabilities, and marina-based infrastructure.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
