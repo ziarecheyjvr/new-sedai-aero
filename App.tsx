@@ -142,7 +142,7 @@ const App: React.FC = () => {
                 </div>
               </div>
               <Reveal className="relative group overflow-hidden rounded-[3rem] aspect-[4/5] max-w-md ml-auto border border-white/5">
-                <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&q=80&w=1000" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="Engine" />
+                <img src="/assets/images/crop-duster.jpg" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="Engine" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all duration-700"></div>
                 <div className="absolute bottom-10 left-10">
                   <p className="text-[9px] font-black text-white tracking-[0.4em] uppercase">SYSTEM PERFORMANCE</p>
@@ -151,7 +151,7 @@ const App: React.FC = () => {
             </div>
             <div className="lg:pt-64 space-y-40">
               <Reveal className="relative group overflow-hidden rounded-[3rem] aspect-[4/3] w-full border border-white/5">
-                <img src="https://images.unsplash.com/photo-1520437358207-323b43b50729?auto=format&fit=crop&q=80&w=1000" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="Cockpit" />
+                <img src="/assets/images/sedai.jpg" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="Cockpit" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all duration-700"></div>
               </Reveal>
               <div className="max-w-xl">
