@@ -49,9 +49,9 @@ const App: React.FC = () => {
       <header className="relative h-screen min-h-[900px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/assets/images/hero.jpg"
+            src="/assets/images/sedai-hero.jpg"
             className="w-full h-full object-cover opacity-80 scale-x-[-1] animate-kenBurns"
-            alt="Sedai Aero Craft"
+            alt="Sedai Aero"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20" />
@@ -141,18 +141,18 @@ const App: React.FC = () => {
                   ))}
                 </div>
               </div>
-              <Reveal className="relative group overflow-hidden rounded-[3rem] aspect-[4/5] max-w-md ml-auto border border-white/5">
-                <img src="/assets/images/crop-duster.jpg" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="Engine" />
+              <Reveal className="relative group overflow-hidden rounded-[3rem] aspect-[4/3] w-full border border-white/5">
+                <img src="/assets/images/sedai-what-we-do.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="What We Do" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all duration-700"></div>
-                <div className="absolute bottom-10 left-10">
-                  <p className="text-[9px] font-black text-white tracking-[0.4em] uppercase">SYSTEM PERFORMANCE</p>
-                </div>
               </Reveal>
             </div>
-            <div className="lg:pt-64 space-y-40">
+            <div className="space-y-40">
               <Reveal className="relative group overflow-hidden rounded-[3rem] aspect-[4/3] w-full border border-white/5">
-                <img src="/assets/images/sedai.jpg" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="Cockpit" />
+                <img src="/assets/images/sedai-who-we-are.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="Who We Are" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all duration-700"></div>
+                <div className="absolute bottom-10 left-10">
+                  <p className="text-[9px] font-black text-white tracking-[0.4em] uppercase">OUR ORIGINS</p>
+                </div>
               </Reveal>
               <div className="max-w-xl">
                 <Reveal>
@@ -247,9 +247,9 @@ const App: React.FC = () => {
           </div>
           <Reveal delay="reveal-delay-3" className="relative">
             <div className="aspect-[4/3] rounded-[4rem] overflow-hidden border border-white/10 group">
-              <img src="/assets/images/sedai.jpg" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="Marina" />
+              <img src="/assets/images/sedai-harbor.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="Harbor Vertiport" />
             </div>
-            <div className="absolute -bottom-10 -right-10 p-12 glass-panel rounded-[3rem] max-w-sm hidden md:block">
+            <div className="absolute -bottom-10 -right-10 p-12 glass-panel bg-zinc-900 rounded-[3rem] max-w-sm hidden md:block">
               <p className="text-[#b46c00] font-black italic text-3xl font-heading mb-4 leading-none uppercase">Amphibious <br /> Freedom</p>
               <p className="text-zinc-500 text-xs">Sedai Aero meets commuters where they already are.</p>
             </div>
@@ -264,7 +264,7 @@ const App: React.FC = () => {
             <h2 className="text-5xl md:text-8xl font-black font-heading leading-none uppercase tracking-tighter">OUR <br /> <span className="text-white/20">FLEET</span></h2>
             <p className="text-zinc-600 font-black tracking-[0.5em] text-[10px] uppercase pb-4">Scalable Mobility</p>
           </Reveal>
-          <div className="flex flex-wrap justify-center gap-12">
+          <div className="flex flex-wrap justify-center gap-[150px]">
             {PRODUCTS.map((product, i) => (
               <Reveal key={product.id} delay={`reveal-delay-${i + 1}`} className="group flex flex-col max-w-md w-full">
                 <div className="aspect-[4/3] overflow-hidden rounded-[3rem] mb-12 relative border border-white/5">

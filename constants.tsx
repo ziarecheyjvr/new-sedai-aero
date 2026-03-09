@@ -8,7 +8,7 @@ export const PRODUCTS: Product[] = [
     category: 'Luxury Ultralight Hybrid eVTOL',
     description: 'Luxury ultralight hybrid eVTOL — sleek, safe, affordable flying car. The world’s first luxury ultralight HPEV.',
     specs: ['462 HP Total Output', 'V-Twin Hybrid System', 'Advanced e-Motor', 'Proprietary power delivery'],
-    imageUrl: '/assets/images/sedai.jpg'
+    imageUrl: '/assets/images/sedai-fleet.png'
   },
   {
     id: 'sedai-cropduster',
