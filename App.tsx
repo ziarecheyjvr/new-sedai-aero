@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { CORE_STATS, PRODUCTS, NAVIGATION_LINKS, MARKET_PROBLEM, SEDAI_SOLUTION, TIMELINE, PRESS_LOGOS } from './constants';
 import Navbar from './components/Navbar';
-import AIAssistant from './components/AIAssistant';
+import InquiryModal from './components/InquiryModal';
 
 interface RevealProps {
   children: React.ReactNode;
@@ -41,15 +41,17 @@ const Reveal: React.FC<RevealProps> = ({ children, className = '', delay = '', t
 };
 
 const App: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-black selection:bg-[#b46c00]/30 text-zinc-100">
-      <Navbar />
+      <Navbar onContactClick={() => setIsModalOpen(true)} />
 
       {/* Hero Section */}
       <header className="relative h-screen min-h-[900px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/assets/images/sedai-hero.jpg"
+            src="/assets/images/Sedai Aero.png"
             className="w-full h-full object-cover opacity-80 scale-x-[-1] animate-kenBurns"
             alt="Sedai Aero"
           />
@@ -69,10 +71,10 @@ const App: React.FC = () => {
               Sedai Aero — Aircraft for All People
             </p>
             <div className="flex flex-wrap gap-6 animate-fadeInUp" style={{ animationDelay: '800ms' }}>
-              <button className="px-12 py-5 bg-white text-black text-[11px] font-black tracking-[0.3em] uppercase hover:bg-[#b46c00] hover:text-white transition-all duration-500">
+              <button onClick={() => document.getElementById('performance')?.scrollIntoView({ behavior: 'smooth' })} className="px-12 py-5 bg-white text-black text-[11px] font-black tracking-[0.3em] uppercase hover:bg-[#b46c00] hover:text-white transition-all duration-500">
                 DISCOVER PERFORMANCE
               </button>
-              <button className="px-12 py-5 bg-black/40 backdrop-blur-xl border border-white/10 text-white text-[11px] font-black tracking-[0.3em] uppercase hover:bg-white/10 transition-all duration-500">
+              <button onClick={() => setIsModalOpen(true)} className="px-12 py-5 bg-black/40 backdrop-blur-xl border border-white/10 text-white text-[11px] font-black tracking-[0.3em] uppercase hover:bg-white/10 transition-all duration-500">
                 REQUEST TELEMETRY
               </button>
             </div>
@@ -142,13 +144,13 @@ const App: React.FC = () => {
                 </div>
               </div>
               <Reveal className="relative group overflow-hidden rounded-[3rem] aspect-[4/3] w-full border border-white/5">
-                <img src="/assets/images/sedai-what-we-do.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="What We Do" />
+                <img src="/assets/images/what-we-do.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="What We Do" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all duration-700"></div>
               </Reveal>
             </div>
             <div className="space-y-40">
               <Reveal className="relative group overflow-hidden rounded-[3rem] aspect-[4/3] w-full border border-white/5">
-                <img src="/assets/images/sedai-who-we-are.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="Who We Are" />
+                <img src="/assets/images/who-we-are.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="Who We Are" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all duration-700"></div>
                 <div className="absolute bottom-10 left-10">
                   <p className="text-[9px] font-black text-white tracking-[0.4em] uppercase">OUR ORIGINS</p>
@@ -184,7 +186,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Technical Specification Section */}
-      <section className="py-64 px-10 bg-black relative">
+      <section id="performance" className="py-64 px-10 bg-black relative">
         <div className="max-w-[1800px] mx-auto">
           <div className="text-center mb-40">
             <Reveal>
@@ -247,7 +249,7 @@ const App: React.FC = () => {
           </div>
           <Reveal delay="reveal-delay-3" className="relative">
             <div className="aspect-[4/3] rounded-[4rem] overflow-hidden border border-white/10 group">
-              <img src="/assets/images/sedai-harbor.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="Harbor Vertiport" />
+              <img src="/assets/images/harbor.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[2s]" alt="Harbor Vertiport" />
             </div>
             <div className="absolute -bottom-10 -right-10 p-12 glass-panel bg-zinc-900 rounded-[3rem] max-w-sm hidden md:block">
               <p className="text-[#b46c00] font-black italic text-3xl font-heading mb-4 leading-none uppercase">Amphibious <br /> Freedom</p>
@@ -292,8 +294,6 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      <AIAssistant />
-
       <section className="py-64 px-10 text-center bg-black relative">
         <div className="glow-overlay opacity-30" />
         <div className="max-w-6xl mx-auto relative z-10">
@@ -314,7 +314,7 @@ const App: React.FC = () => {
           </Reveal>
           <Reveal delay="reveal-delay-3" className="flex flex-col items-center gap-16">
             <h3 className="text-4xl md:text-6xl font-black font-heading uppercase tracking-tighter leading-none">THE WORLD IS READY.</h3>
-            <button className="group relative overflow-hidden px-24 py-10 bg-white text-black font-black rounded-full transition-all duration-700 hover:bg-[#b46c00] hover:text-white transform hover:scale-105 active:scale-95">
+            <button onClick={() => setIsModalOpen(true)} className="group relative overflow-hidden px-24 py-10 bg-white text-black font-black rounded-full transition-all duration-700 hover:bg-[#b46c00] hover:text-white transform hover:scale-105 active:scale-95">
               <span className="relative z-10 text-2xl tracking-[0.1em] uppercase">ARE YOU READY TO FLY?</span>
               <div className="absolute inset-0 bg-[#b46c00] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
             </button>
@@ -346,13 +346,15 @@ const App: React.FC = () => {
           <Reveal delay="reveal-delay-3">
             <h5 className="text-zinc-400 text-[10px] font-black tracking-[0.4em] mb-10 uppercase">Registry</h5>
             <div className="text-zinc-600 text-[10px] font-bold uppercase tracking-[0.2em] space-y-2">
-              <p>© 2024 Sedai Aero Systems</p>
+              <p>© 2026 Sedai Aero Systems</p>
               <p>California, USA | Florida, USA</p>
               <p>Privacy Policy | Terms of Operation</p>
             </div>
           </Reveal>
         </div>
       </footer>
+
+      <InquiryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };

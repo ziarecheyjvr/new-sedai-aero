@@ -2,7 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { NAVIGATION_LINKS } from '../constants';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onContactClick?: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -43,8 +47,8 @@ const Navbar: React.FC = () => {
               <span className="text-zinc-700">US</span>
             </div>
           </div>
-          <button className="px-8 py-3 bg-transparent border border-white/10 hover:border-[#b46c00]/40 text-white text-[9px] font-black tracking-[0.4em] uppercase transition-all duration-500 hover:bg-white/5">
-            Configurator
+          <button onClick={onContactClick} className="px-8 py-3 bg-transparent border border-white/10 hover:border-[#b46c00]/40 text-white text-[9px] font-black tracking-[0.4em] uppercase transition-all duration-500 hover:bg-white/5">
+            Contact Us
           </button>
         </div>
       </div>
