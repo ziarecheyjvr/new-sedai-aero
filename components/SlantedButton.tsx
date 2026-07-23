@@ -16,19 +16,19 @@ const SlantedButton: React.FC<SlantedButtonProps> = ({
   className = '',
   ...props
 }) => {
-  const baseStyles = "relative inline-flex items-center justify-center transform -skew-x-12 transition-all duration-300 font-black tracking-[0.25em] uppercase group select-none cursor-pointer border-2";
+  const baseStyles = "relative inline-flex items-center justify-center transform -skew-x-12 transition-all duration-300 font-black tracking-[0.25em] uppercase group select-none cursor-pointer border";
   
-  // Significantly thicker vertical padding (py), horizontal padding (px), and explicit height
+  // Balanced vertical padding (py), horizontal padding (px), and height
   const sizeStyles = {
-    sm: "px-8 py-4 text-[10px] min-h-[48px]",
-    md: "px-11 py-5.5 text-[11px] min-h-[58px]",
-    lg: "px-14 py-6.5 text-[13px] min-h-[68px]"
+    sm: "px-6 py-3 text-[9.5px] min-h-[42px]",
+    md: "px-8 py-4 text-[10.5px] min-h-[50px]",
+    lg: "px-11 py-5 text-[12px] min-h-[58px]"
   };
 
   const iconSize = {
-    sm: "w-3.5 h-3.5",
-    md: "w-4.5 h-4.5",
-    lg: "w-5 h-5"
+    sm: "w-3 h-3",
+    md: "w-3.5 h-3.5",
+    lg: "w-4 h-4"
   };
 
   const variantStyles = {
