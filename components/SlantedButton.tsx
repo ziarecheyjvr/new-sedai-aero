@@ -18,36 +18,31 @@ const SlantedButton: React.FC<SlantedButtonProps> = ({
 }) => {
   const baseStyles = "relative inline-flex items-center justify-center transform -skew-x-12 transition-all duration-300 font-black tracking-[0.25em] uppercase group select-none cursor-pointer";
   
+  // Increased vertical and horizontal padding for substantial, thick button height
   const sizeStyles = {
-    sm: "px-5 py-2.5 text-[9px]",
-    md: "px-7 py-3.5 text-[10px]",
-    lg: "px-9 py-4.5 text-[11px]"
-  };
-
-  const badgeSize = {
-    sm: "w-3.5 h-3.5",
-    md: "w-4 h-4",
-    lg: "w-4.5 h-4.5"
+    sm: "px-7 py-3.5 text-[10px]",
+    md: "px-9 py-4.5 text-[11px]",
+    lg: "px-12 py-5.5 text-[12px]"
   };
 
   const iconSize = {
-    sm: "w-2 h-2",
-    md: "w-2.5 h-2.5",
-    lg: "w-3 h-3"
+    sm: "w-3 h-3",
+    md: "w-3.5 h-3.5",
+    lg: "w-4 h-4"
   };
 
   const variantStyles = {
-    primary: "bg-zinc-900/90 border border-white/20 text-white hover:border-[#b46c00] hover:shadow-[0_0_25px_rgba(180,108,0,0.35)]",
-    secondary: "bg-black/60 backdrop-blur-xl border border-white/15 text-zinc-300 hover:border-white/40 hover:text-white",
-    accent: "bg-[#b46c00] text-white border border-[#b46c00] hover:bg-[#c97b00] hover:shadow-[0_0_30px_rgba(180,108,0,0.5)]",
-    ghost: "bg-transparent border border-white/10 text-zinc-400 hover:text-white hover:border-white/30"
+    primary: "bg-zinc-900 border border-white/20 text-white hover:border-[#b46c00] hover:bg-zinc-800 hover:shadow-[0_0_30px_rgba(180,108,0,0.4)]",
+    secondary: "bg-black/70 backdrop-blur-xl border border-white/20 text-zinc-200 hover:border-white/50 hover:text-white hover:bg-white/10",
+    accent: "bg-[#b46c00] text-black border border-[#b46c00] hover:bg-white hover:border-white hover:text-black hover:shadow-[0_0_35px_rgba(180,108,0,0.6)]",
+    ghost: "bg-transparent border border-white/15 text-zinc-300 hover:text-white hover:border-white/40 hover:bg-white/5"
   };
 
-  const badgeBg = {
-    primary: "bg-[#b46c00] text-black group-hover:bg-white transition-colors duration-300",
-    secondary: "bg-white/10 text-white group-hover:bg-[#b46c00] group-hover:text-black transition-colors duration-300",
-    accent: "bg-black text-[#b46c00] group-hover:bg-white group-hover:text-black transition-colors duration-300",
-    ghost: "bg-white/10 text-zinc-400 group-hover:bg-[#b46c00] group-hover:text-white transition-colors duration-300"
+  const iconColor = {
+    primary: "text-[#b46c00] group-hover:text-white",
+    secondary: "text-[#b46c00] group-hover:text-white",
+    accent: "text-black group-hover:text-black",
+    ghost: "text-[#b46c00] group-hover:text-white"
   };
 
   return (
@@ -55,13 +50,11 @@ const SlantedButton: React.FC<SlantedButtonProps> = ({
       className={`${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`}
       {...props}
     >
-      <span className="relative z-10 flex items-center gap-3 transform skew-x-12">
+      <span className="relative z-10 flex items-center gap-3.5 transform skew-x-12">
         {icon && (
-          <span className={`${badgeSize[size]} rounded-[3px] flex items-center justify-center flex-shrink-0 ${badgeBg[variant]} transition-transform duration-300 group-hover:scale-105`}>
-            <svg className={`${iconSize[size]} fill-current transform translate-x-[0.5px]`} viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </span>
+          <svg className={`${iconSize[size]} ${iconColor[variant]} fill-current transition-all duration-300 group-hover:translate-x-0.5 flex-shrink-0`} viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
         )}
         <span className="leading-none">{children}</span>
       </span>
