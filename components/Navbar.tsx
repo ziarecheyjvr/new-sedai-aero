@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { NAVIGATION_LINKS } from '../constants';
+import SlantedButton from './SlantedButton';
 
 interface NavbarProps {
   onContactClick?: () => void;
@@ -19,9 +20,12 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${isScrolled ? 'bg-black/80 backdrop-blur-2xl py-6 border-b border-white/5' : 'bg-transparent py-10'}`}>
       <div className="max-w-[1800px] mx-auto px-10 flex justify-between items-center">
         <div className="flex items-center gap-20">
-          <div className="flex flex-col group cursor-pointer">
-            <span className="text-2xl font-black tracking-[0.3em] font-heading leading-none group-hover:text-[#b46c00] transition-colors uppercase">SEDAI</span>
-            <span className="text-[8px] tracking-[0.5em] text-zinc-600 font-black uppercase mt-1">AERO SYSTEMS</span>
+          <div className="flex items-center gap-3 group cursor-pointer">
+            <img src="/assets/images/Sedai%20Aero%20logo.webp" alt="Sedai Aero Logo" className="h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+            <div className="flex flex-col">
+              <span className="text-2xl font-black tracking-[0.3em] font-heading leading-none group-hover:text-[#b46c00] transition-colors uppercase">SEDAI</span>
+              <span className="text-[8px] tracking-[0.5em] text-zinc-600 font-black uppercase mt-1">AERO SYSTEMS</span>
+            </div>
           </div>
           
           <div className="hidden xl:flex items-center gap-14">
@@ -47,9 +51,9 @@ const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
               <span className="text-zinc-700">US</span>
             </div>
           </div>
-          <button onClick={onContactClick} className="px-8 py-3 bg-transparent border border-white/10 hover:border-[#b46c00]/40 text-white text-[9px] font-black tracking-[0.4em] uppercase transition-all duration-500 hover:bg-white/5">
-            Contact Us
-          </button>
+          <SlantedButton onClick={onContactClick} variant="accent" size="sm">
+            Commercial Inquiries
+          </SlantedButton>
         </div>
       </div>
     </nav>
