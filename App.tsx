@@ -459,19 +459,22 @@ const App: React.FC = () => {
               ))}
             </div>
 
-            <Reveal delay="reveal-delay-4">
-              <SlantedButton variant="primary" size="lg" onClick={openInquiryModal}>
+            <Reveal delay="reveal-delay-4" className="flex flex-wrap items-center gap-4">
+              <SlantedButton variant="accent" size="lg" onClick={() => window.open('https://sedaicropduster.com/', '_blank')}>
+                VISIT SEDAICROPDUSTER.COM ↗
+              </SlantedButton>
+              <SlantedButton variant="secondary" size="lg" onClick={openInquiryModal}>
                 GET INDUSTRIAL QUOTE
               </SlantedButton>
             </Reveal>
           </div>
 
-          <Reveal className="relative group overflow-hidden rounded-3xl aspect-[4/3] w-full border border-white/10 shadow-2xl">
+          <Reveal className="relative group overflow-hidden rounded-3xl aspect-[4/3] w-full border border-white/10 shadow-2xl cursor-pointer" onClick={() => window.open('https://sedaicropduster.com/', '_blank')}>
             <img src="/assets/images/crop-duster.jpg" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" alt="Sedai CropDuster" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent group-hover:opacity-60 transition-opacity" />
             <div className="absolute bottom-8 left-8 p-6 glass-panel rounded-2xl border border-white/10 max-w-sm">
-              <span className="text-[#b46c00] text-[9px] font-black tracking-[0.4em] uppercase block mb-1">AGRITECH PLATFORM</span>
-              <p className="text-white font-bold text-sm uppercase tracking-wide">Automated high-capacity aerial spraying & mapping.</p>
+              <span className="text-[#b46c00] text-[9px] font-black tracking-[0.4em] uppercase block mb-1">AGRITECH PLATFORM ↗</span>
+              <p className="text-white font-bold text-sm uppercase tracking-wide">Automated high-capacity aerial spraying & mapping. Visit sedaicropduster.com</p>
             </div>
           </Reveal>
         </div>
