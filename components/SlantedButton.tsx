@@ -21,7 +21,19 @@ const SlantedButton: React.FC<SlantedButtonProps> = ({
   const sizeStyles = {
     sm: "px-5 py-2.5 text-[9px]",
     md: "px-7 py-3.5 text-[10px]",
-    lg: "px-10 py-5 text-[11px]"
+    lg: "px-9 py-4.5 text-[11px]"
+  };
+
+  const badgeSize = {
+    sm: "w-3.5 h-3.5",
+    md: "w-4 h-4",
+    lg: "w-4.5 h-4.5"
+  };
+
+  const iconSize = {
+    sm: "w-2 h-2",
+    md: "w-2.5 h-2.5",
+    lg: "w-3 h-3"
   };
 
   const variantStyles = {
@@ -32,10 +44,10 @@ const SlantedButton: React.FC<SlantedButtonProps> = ({
   };
 
   const badgeBg = {
-    primary: "bg-[#b46c00] text-black group-hover:bg-white transition-colors",
-    secondary: "bg-white/10 text-white group-hover:bg-[#b46c00] group-hover:text-black transition-colors",
-    accent: "bg-black text-[#b46c00] group-hover:bg-white group-hover:text-black transition-colors",
-    ghost: "bg-white/10 text-zinc-400 group-hover:bg-[#b46c00] group-hover:text-white transition-colors"
+    primary: "bg-[#b46c00] text-black group-hover:bg-white transition-colors duration-300",
+    secondary: "bg-white/10 text-white group-hover:bg-[#b46c00] group-hover:text-black transition-colors duration-300",
+    accent: "bg-black text-[#b46c00] group-hover:bg-white group-hover:text-black transition-colors duration-300",
+    ghost: "bg-white/10 text-zinc-400 group-hover:bg-[#b46c00] group-hover:text-white transition-colors duration-300"
   };
 
   return (
@@ -45,11 +57,13 @@ const SlantedButton: React.FC<SlantedButtonProps> = ({
     >
       <span className="relative z-10 flex items-center gap-3 transform skew-x-12">
         {icon && (
-          <span className={`w-4 h-4 rounded-sm flex items-center justify-center text-[8px] font-black leading-none ${badgeBg[variant]}`}>
-            ▶
+          <span className={`${badgeSize[size]} rounded-[3px] flex items-center justify-center flex-shrink-0 ${badgeBg[variant]} transition-transform duration-300 group-hover:scale-105`}>
+            <svg className={`${iconSize[size]} fill-current transform translate-x-[0.5px]`} viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
           </span>
         )}
-        <span>{children}</span>
+        <span className="leading-none">{children}</span>
       </span>
     </button>
   );
