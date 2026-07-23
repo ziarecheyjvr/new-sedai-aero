@@ -218,7 +218,9 @@ const App: React.FC = () => {
         </div>
       </header>
 
-      {/* Quote Philosophy Section */}
+      {/* Main Content Sections */}
+      <main className="relative z-10">
+        {/* Quote Philosophy Section */}
       <section id="about" className="py-24 px-10 relative overflow-hidden bg-gradient-to-b from-black via-zinc-950/40 to-black">
         <div className="max-w-[1800px] mx-auto">
           <Reveal>
@@ -517,8 +519,9 @@ const App: React.FC = () => {
           </Reveal>
         </div>
       </section>
+      </main>
 
-      {/* FOOTER (Matching Reference Image Layout with Waitlist Signup) */}
+      {/* FOOTER */}
       <footer className="py-20 px-10 border-t border-white/10 bg-zinc-950">
         <div className="max-w-[1800px] mx-auto grid lg:grid-cols-12 gap-16 items-start">
           {/* Left Column: Brand & Social */}
