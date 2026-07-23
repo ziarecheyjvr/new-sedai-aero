@@ -40,9 +40,9 @@ export const PRESS_LOGOS = [
 ];
 
 export const NAVIGATION_LINKS = [
-  { name: 'WHO WE ARE', href: '#about' },
-  { name: 'WHAT WE DO', href: '#tech' },
-  { name: 'THE HX50', href: '#vision' },
+  { name: 'WHO WE ARE', href: '#origins' },
+  { name: 'WHAT WE DO', href: '#execution' },
+  { name: 'PERFORMANCE', href: '#performance' },
   { name: 'INFRASTRUCTURE', href: '#infrastructure' }
 ];
 

@@ -279,7 +279,7 @@ const App: React.FC = () => {
           </div>
 
           <Reveal className="relative group overflow-hidden rounded-3xl aspect-[4/3] w-full border border-white/10 shadow-2xl">
-            <img src="/assets/images/who-we-are.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" alt="Who We Are" />
+            <img src="/assets/images/who-we-are.png" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" alt="Who We Are" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent group-hover:opacity-60 transition-opacity" />
             <div className="absolute bottom-8 left-8 p-6 glass-panel rounded-2xl border border-white/10 max-w-sm">
               <span className="text-[#b46c00] text-[9px] font-black tracking-[0.4em] uppercase block mb-1">PROPRIETARY R&D</span>
@@ -293,7 +293,7 @@ const App: React.FC = () => {
       <section id="execution" className="py-28 px-10 border-t border-white/10 bg-zinc-950/40 relative">
         <div className="max-w-[1800px] mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <Reveal className="order-2 lg:order-1 relative group overflow-hidden rounded-3xl aspect-[4/3] w-full border border-white/10 shadow-2xl">
-            <img src="/assets/images/what-we-do.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" alt="What We Do" />
+            <img src="/assets/images/what-we-do.png" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" alt="What We Do" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent group-hover:opacity-60 transition-opacity" />
             <div className="absolute bottom-8 left-8 p-6 glass-panel rounded-2xl border border-white/10 max-w-sm">
               <span className="text-[#b46c00] text-[9px] font-black tracking-[0.4em] uppercase block mb-1">LUXURY HPEV AIRCRAFT</span>
@@ -377,7 +377,7 @@ const App: React.FC = () => {
           </div>
 
           <Reveal className="relative group overflow-hidden rounded-3xl aspect-[4/3] w-full border border-white/10 shadow-2xl">
-            <img src="/assets/images/sedai-fleet.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" alt="Sedai Fleet" />
+            <img src="/assets/images/sedai-fleet.png" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" alt="Sedai Fleet" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent group-hover:opacity-60 transition-opacity" />
             <div className="absolute top-8 right-8 p-4 glass-panel rounded-xl border border-white/10">
               <span className="text-[10px] font-black text-[#b46c00] tracking-widest uppercase block">SEDAI AERO HPEV</span>
@@ -391,7 +391,7 @@ const App: React.FC = () => {
       <section id="infrastructure" className="py-28 px-10 border-t border-white/10 bg-zinc-950/40 relative">
         <div className="max-w-[1800px] mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <Reveal className="order-2 lg:order-1 relative group overflow-hidden rounded-3xl aspect-[4/3] w-full border border-white/10 shadow-2xl">
-            <img src="/assets/images/harbor.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" alt="Harbor Vertiport" />
+            <img src="/assets/images/harbor.png" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" alt="Harbor Vertiport" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent group-hover:opacity-60 transition-opacity" />
             <div className="absolute bottom-8 left-8 p-6 glass-panel rounded-2xl border border-white/10 max-w-sm">
               <span className="text-[#b46c00] text-[9px] font-black tracking-[0.4em] uppercase block mb-1">AMPHIBIOUS FREEDOM</span>
@@ -472,7 +472,7 @@ const App: React.FC = () => {
           </div>
 
           <Reveal className="relative group overflow-hidden rounded-3xl aspect-[4/3] w-full border border-white/10 shadow-2xl cursor-pointer" onClick={() => window.open('https://sedaicropduster.com/', '_blank')}>
-            <img src="/assets/images/crop-duster.jpg" className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" alt="Sedai CropDuster" />
+            <img src="/assets/images/crop-duster.jpg" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" alt="Sedai CropDuster" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent group-hover:opacity-60 transition-opacity" />
             <div className="absolute bottom-8 left-8 p-6 glass-panel rounded-2xl border border-white/10 max-w-sm">
               <span className="text-[#b46c00] text-[9px] font-black tracking-[0.4em] uppercase block mb-1">AGRITECH PLATFORM ↗</span>
